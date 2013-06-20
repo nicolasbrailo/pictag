@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: pictag
+Version: 12.07.17
+Summary: geotag your pictures
+Home-page: https://launchpad.net/pictag
+Author: Thomas Bechtold
+Author-email: thomasbechtold@jpberlin.de
+License: GPL-3
+Description: Simple Application to geotag your pictures
+Platform: UNKNOWN
+Requires: dbus
+Requires: gi.repository.Champlain
+Requires: gi.repository.Clutter
+Requires: gi.repository.GLib
+Requires: gi.repository.GObject
+Requires: gi.repository.Gdk
+Requires: gi.repository.GdkPixbuf
+Requires: gi.repository.Gio
+Requires: gi.repository.Gtk
+Requires: gi.repository.GtkChamplain
+Requires: gi.repository.GtkClutter
+Requires: gi.repository.LaunchpadIntegration
+Requires: pyexiv2
+Provides: pictag
+Provides: pictag_lib

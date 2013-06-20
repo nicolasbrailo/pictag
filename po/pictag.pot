@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-07 19:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../pictag/__init__.py:36
+msgid "Show debug messages (-vv debugs pictag_lib also)"
+msgstr ""
+
+#: ../data/ui/AboutPictagDialog.ui.h:1
+msgid ""
+"# Copyright (C) 2012 Thomas Bechtold <thomasbechtold@jpberlin.de>\n"
+"# This program is free software: you can redistribute it and/or modify it \n"
+"# under the terms of the GNU General Public License version 3, as "
+"published \n"
+"# by the Free Software Foundation.\n"
+"# \n"
+"# This program is distributed in the hope that it will be useful, but \n"
+"# WITHOUT ANY WARRANTY; without even the implied warranties of \n"
+"# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR \n"
+"# PURPOSE.  See the GNU General Public License for more details.\n"
+"# \n"
+"# You should have received a copy of the GNU General Public License along \n"
+"# with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+
+#: ../data/ui/AboutPictagDialog.ui.h:14
+msgid "Copyright (C) 2012 Thomas Bechtold <thomasbechtold@jpberlin.de>"
+msgstr ""
+
+#: ../data/ui/PictagWindow.ui.h:1 ../pictag.desktop.in.h:1
+msgid "Pictag"
+msgstr ""
+
+#: ../data/ui/PictagWindow.ui.h:2
+msgid "_File"
+msgstr ""
+
+#: ../data/ui/PictagWindow.ui.h:3
+msgid "_Help"
+msgstr ""
+
+#: ../data/ui/PictagWindow.ui.h:4
+msgid "Contents"
+msgstr ""
+
+#: ../data/ui/PictagWindow.ui.h:5
+msgid "select directory"
+msgstr ""
+
+#: ../data/ui/PictagWindow.ui.h:6
+msgid "select folder with pictures"
+msgstr ""
+
+#: ../data/ui/PictagWindow.ui.h:7
+msgid "label"
+msgstr ""
+
+#: ../pictag.desktop.in.h:2
+msgid "Pictag application"
+msgstr ""
+
+#: ../data/ui/PreferencesPictagDialog.ui.h:1
+msgid "Pictag Preferences"
+msgstr ""
+
+#: ../data/ui/PreferencesPictagDialog.ui.h:2
+msgid "_Example entry:"
+msgstr ""
+
+#: ../pictag/PictagWindow.py:169
+#, python-format
+msgid ""
+"<big>%(path)s</big>\n"
+"date/time: %(datetime)s\n"
+"latitude: %(latitude)s N\n"
+"longitude : %(longitude)s E\n"
+msgstr ""
+
+#: ../pictag/PictagWindow.py:185
+#, python-format
+msgid "%d pictures selected\n"
+msgstr ""
+
+#: ../pictag/PictagWindow.py:192
+msgid "Please choose a folder"
+msgstr ""
+
+#: ../pictag/PictagWindow.py:257
+#, python-format
+msgid "%d image(s) saved"
+msgstr ""
+
+#: ../pictag/PictagWindow.py:279
+#, python-format
+msgid "%(latitude).5f °N / %(longitude).5f °E"
+msgstr ""
+
+#: ../pictag/PictagWindow.py:304
+msgid "loading data..."
+msgstr ""

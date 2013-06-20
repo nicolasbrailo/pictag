@@ -1,0 +1,32 @@
+Source: pictag
+Section: python
+Priority: extra
+Build-Depends: debhelper (>= 8),
+ python (>= 2.6.6-3~),
+ python-distutils-extra (>= 2.10),
+ libglib2.0-bin
+Maintainer: Thomas Bechtold <thomasbechtold@jpberlin.de>
+Standards-Version: 3.9.3
+X-Python-Version: >= 2.6
+
+Package: pictag
+Architecture: all
+Depends: ${misc:Depends},
+ ${python:Depends},
+ python-pyexiv2,
+ gir1.2-champlain-0.12,
+ gir1.2-gtkchamplain-0.12,
+ gir1.2-gtk-3.0,
+ python-dbus,
+ gir1.2-glib-2.0,
+ gir1.2-clutter-1.0,
+ gir1.2-gdkpixbuf-2.0,
+ gir1.2-gtkclutter-1.0,
+ gir1.2-launchpad-integration-3.0,
+ geoclue-ubuntu-geoip,
+ geoclue-hostip,
+ yelp
+Description: simple application to geotag your pictures
+ This app makes it very easy to geotag your pictures. Simply choose a number 
+ of pictures, find the location on a map and latitude and longitude 
+ coordinates will be saved in the EXIF data of the pictures themselves.

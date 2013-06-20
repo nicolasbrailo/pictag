@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="pictag">
+  <schema id="net.launchpad.pictag" path="/net/launchpad/pictag/">
+    <key name="image-path-latest" type="s">
+      <default>'~'</default>
+      <summary>Latest image path</summary>
+      <description>The latest used image path. This is used to start the program with the latest use path.</description>
+    </key>
+  </schema>
+</schemalist>

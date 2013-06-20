@@ -1,0 +1,40 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="basics">
+
+<info>
+  <link type="guide" xref="index#contents"/>
+  <credit type="author">
+    <name>Thomas Bechtold</name>
+    <email>thomasbechtold@jpberlin.de</email>
+    <years>2012</years>
+  </credit>
+  <desc>Basic usage of pictag</desc>
+</info>
+
+
+<title>Basics</title>
+<section id="quick-guide">
+  <title>Quick guide</title>
+  <p>Here is the quick guide to tag your pictures</p>
+  <steps>
+    <item><p>select a folder with pictures. the list on the left side should contain all .png and .jpg pictures available in the selected folder.</p></item>
+    <item><p>select the pictures you want to set the position for.</p></item>
+    <item><p>click on the map where the pictures should be.</p></item>
+    <item><p>done. all pictures are now tagged.</p></item>
+  </steps>
+</section>
+
+<section id="overview">
+  <title>Overview</title>
+  <p>The pictag main window is divided in two parts. the left side shows a list with pictures from the selected folder. The right side shows a map with blue rectangles for every tagged picture.</p>
+  <figure>
+    <title>pictag main window</title>
+    <desc>The pictag main window to tag your pictures</desc>
+    <media type="image" src="figures/pictag-overview.png"/>
+  </figure>
+  <p>To change the list with pictures on the left side, use the button called "select directory" on top of the list. After you selected a new directory, the list will be updated.</p>
+  <p>To set the latitude and longitude of one or more pictures, select the picture(s) in the list and click on the map on the right. All selected pictures have now the selected latitude and longitude set.</p>
+  <p>To check the current position of a picture, select one picture on the left side and check the values on the bottom left corner. There you can find a picture preview and also the date/time, latitude and longitude.</p>
+</section>
+</page>

@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+%:
+ifneq ($(shell dh -l | grep -xF translations),)
+	dh $@ --with python2,translations
+else
+	dh $@ --with python2
+endif
+
+override_dh_auto_install:
+	dh_auto_install -- --install-scripts=/opt/extras.ubuntu.com/pictag/bin                 --install-data=/opt/extras.ubuntu.com/pictag                 --install-lib=/opt/extras.ubuntu.com/pictag
+
+override_dh_python2:
+	dh_python2 /opt/extras.ubuntu.com/pictag
+
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/pictag/opt/extras.ubuntu.com/pictag/bin
+	if [ -x debian/pictag/opt/extras.ubuntu.com/pictag/pictag/pictag ]; then mv debian/pictag/opt/extras.ubuntu.com/pictag/pictag/pictag debian/pictag/opt/extras.ubuntu.com/pictag/bin; fi
+	if [ -f debian/pictag/opt/extras.ubuntu.com/pictag/share/applications/pictag.desktop ]; then \
+		mkdir -p debian/pictag/usr/share/applications; \
+		mv debian/pictag/opt/extras.ubuntu.com/pictag/share/applications/pictag.desktop debian/pictag/usr/share/applications/extras-pictag.desktop; \
+		rmdir --ignore-fail-on-non-empty debian/pictag/opt/extras.ubuntu.com/pictag/share/applications; \
+		sed -i 's|Exec=.*|Exec=/opt/extras.ubuntu.com/pictag/bin/pictag|' debian/pictag/usr/share/applications/extras-pictag.desktop; \
+		sed -i 's|Icon=/usr/|Icon=/opt/extras.ubuntu.com/pictag/|' debian/pictag/usr/share/applications/extras-pictag.desktop; \
+	fi
+	grep -RlZ 'import gettext' debian/pictag/* | xargs -0 -r sed -i 's|\(import\) gettext$$|\1 locale|'
+	grep -RlZ 'from gettext import gettext as _' debian/pictag/* | xargs -0 -r sed -i 's|from gettext \(import gettext as _\)|from locale \1|'
+	grep -RlZ "gettext.textdomain('pictag')" debian/pictag/* | xargs -0 -r sed -i "s|gettext\(\.textdomain('pictag')\)|locale\.bindtextdomain('pictag', '/opt/extras.ubuntu.com/pictag/share/locale')\nlocale\1|" 
+	sed -i "s|__pictag_data_directory__ =.*|__pictag_data_directory__ = '/opt/extras.ubuntu.com/pictag/share/pictag/'|" debian/pictag/opt/extras.ubuntu.com/pictag/pictag*/pictagconfig.py
+	sed -i 's|        sys.path.insert(0, opt_path)|\0\n    os.putenv("XDG_DATA_DIRS", "%s:%s" % ("/opt/extras.ubuntu.com/pictag/share/", os.getenv("XDG_DATA_DIRS", "")))|' debian/pictag/opt/extras.ubuntu.com/pictag/bin/pictag
+	if [ -d debian/pictag/opt/extras.ubuntu.com/pictag/share/glib-2.0/schemas ]; then glib-compile-schemas debian/pictag/opt/extras.ubuntu.com/pictag/share/glib-2.0/schemas; fi

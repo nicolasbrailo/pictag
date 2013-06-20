@@ -1,0 +1,22 @@
+pictag (12.07.17) quantal; urgency=low
+
+  * bump version for pictag ppa
+
+ -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Sat, 14 Jul 2012 08:37:44 +0200
+
+pictag (12.07.16) precise; urgency=low
+
+  * new bugfix release
+  * debian/control:
+    - fix short description
+    - add missing dependencies geoclue-ubuntu-geoip
+      and geoclue-hostip (lp: #1024165)
+    - add build-dep libglib2.0-bin
+
+ -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Sat, 14 Jul 2012 07:51:21 +0200
+
+pictag (12.07.15) precise; urgency=low
+
+  * Initial release.
+
+ -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Mon, 09 Jul 2012 23:03:52 +0200

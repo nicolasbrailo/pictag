@@ -1,0 +1,13 @@
+TODO list:
+
+- show a picture preview on mouse-hover (blocked by lp:1017243)
+- if multiple pictures have the same location, show a list with
+   picture names on mouse hover
+- add a screencast to show the tagging process
+- more tests
+- add a "go to" menu entry to go to a specific position
+- add a menu entry to go to selected image
+- add a path-layer to show a path of the listed pictures ordered by
+   date/time. then you have a map with the way of your travel route.
+- be able to order the picture list by date/time, by name, by long/lat
+- be able to delete a geotag from a picture

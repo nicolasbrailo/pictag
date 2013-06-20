@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Pictag
+_Comment=Pictag application
+Categories=GNOME;Utility;Graphics;
+Exec=pictag
+Icon=/usr/share/pictag/media/pictag.svg
+Terminal=false
+Type=Application
