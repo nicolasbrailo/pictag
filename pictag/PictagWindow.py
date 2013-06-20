@@ -387,7 +387,9 @@ class PictagWindow(Window):
 
         images = list()
         if os.path.isdir(path):
-            for filename in os.listdir(path):
+            lst = os.listdir(path)
+            lst.sort()
+            for filename in lst:
                 if filename.upper().endswith("JPG") or filename.upper().endswith("PNG"):
                     images.append(os.path.join(path, filename))
             
