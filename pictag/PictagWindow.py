@@ -49,9 +49,6 @@ class PictagWindow(Window):
         self.AboutDialog = AboutPictagDialog
         self.PreferencesDialog = PreferencesPictagDialog
 
-        # Code for other initialization actions should be added here.
-        self.settings = Gio.Settings("net.launchpad.pictag")
-
         box_map = self.builder.get_object("box_map")
         #buttons on top of the map
         box_map_buttons = self.builder.get_object("box_map_buttons")

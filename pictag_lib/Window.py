@@ -20,6 +20,29 @@ logger = logging.getLogger('pictag_lib')
 
 from . helpers import get_builder, show_uri, get_help_uri
 
+
+class MockSettings(object):
+    """ A fake settings class to use when gsettings is not available """
+
+    class UnknownSetting(Exception):
+        pass
+
+    def __init__(self):
+        self.last_path = "~"
+
+    def get_string(self, opt):
+        if "image-path-latest" == opt:
+            return self.last_path
+        else:
+            raise MockSettings.UnknownSetting()
+
+    def set_string(self, opt, val):
+        if "image-path-latest" == opt:
+            self.last_path = val
+        else:
+            raise MockSettings.UnknownSetting()
+
+
 # This class is meant to be subclassed by PictagWindow.  It provides
 # common functions and some boilerplate.
 class Window(Gtk.Window):
@@ -60,8 +83,14 @@ class Window(Gtk.Window):
         self.preferences_dialog = None # instance
         self.AboutDialog = None # class
 
-        self.settings = Gio.Settings("net.launchpad.pictag")
-        self.settings.connect('changed', self.on_preferences_changed)
+        schema = Gio.SettingsSchemaSource.get_default()
+        if schema.lookup("net.launchpad.pictag", True):
+            self.settings = Gio.Settings("net.launchpad.pictag")
+            self.settings.connect('changed', self.on_preferences_changed)
+        else:
+            logger.warning("GSettings schema not installed. "
+                         "Running with default options.")
+            self.settings = MockSettings()
 
         # Optional Launchpad integration
         # This shouldn't crash if not found as it is simply used for bug reporting.
